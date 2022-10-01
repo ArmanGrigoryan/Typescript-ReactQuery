@@ -1,0 +1,64 @@
+@import '../../assets/main';
+
+.main-container {
+    padding: 30px 50px;
+
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__img {
+            max-width: 100%;
+            margin: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+
+            span {
+                @media screen and (max-width: 520px) {
+                    height: 300px !important;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                outline: 3px solid $img-border;
+                outline-offset: 10px;
+                border-radius: inherit;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .7;
+                }
+
+                @media screen and (max-width: 520px) {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+
+    &__load-more {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            padding: 10px 30px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: $navbar;
+
+            &:hover {
+                opacity: .8;
+                color: $img-border;
+            }
+        }
+    }
+}
